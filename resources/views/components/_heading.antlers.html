@@ -1,0 +1,25 @@
+---
+sizes:
+  h1: 'xl:text-[86px] lg:text-6xl text-4xl'
+  h2: 'lg:text-[65px] md:text-5xl text-3xl'
+  h3: 'md:text-[40px] text-3xl'
+  h4: 'md:text-[32px] text-2xl'
+  h5: 'md:text-2xl text-xl'
+  h6: 'md:text-xl text-lg'
+colors:
+  gray: 'text-gray-900'
+  lightgray: 'text-gray-500'
+  white: 'text-white'
+  purple: 'text-purple-900'
+font-weight:
+  extralight: 'font-extralight'
+  light: 'font-light'
+  normal: 'font-normal'
+  medium: 'font-medium'
+  semibold: 'font-semibold'
+  bold: 'font-bold'
+---
+
+<{{ as or 'p' }} class="{{ view }} {{ sizes[size] ? sizes[size] : sizes['h2'] }} {{ colors[color] ? colors[color] : colors['gray'] }} {{ font-weight[weight] ? font-weight[weight] : font-weight['normal'] }} {{ /view }} {{ class }}">
+    {{ label }}
+</{{ as or 'p' }}>

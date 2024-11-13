@@ -1,0 +1,14 @@
+title: 'Features Section with Checklist'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: lists
+    field:
+      type: list
+      display: Lists
+      validate:
+        - required

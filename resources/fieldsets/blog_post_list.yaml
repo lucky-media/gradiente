@@ -1,0 +1,27 @@
+title: 'Blog Post List'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: description
+    field:
+      type: textarea
+      display: Description
+  -
+    handle: highlight_first
+    field: latest_blog_posts.highlight_first
+  -
+    handle: posts_per_page
+    field:
+      options:
+        6: Six
+        9: Nine
+        12: Twelve
+      default: '9'
+      type: button_group
+      display: 'Posts per Page'
+      instructions: 'Number of posts per page?'
+      width: 50

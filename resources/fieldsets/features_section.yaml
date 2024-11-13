@@ -1,0 +1,43 @@
+title: 'Features Section'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    import: rich_text
+  -
+    import: button
+  -
+    handle: features
+    field:
+      type: replicator
+      display: Features
+      validate:
+        - required
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            feature:
+              display: Feature
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                    validate:
+                      - required
+                -
+                  import: rich_text
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Image
+                -
+                  import: button

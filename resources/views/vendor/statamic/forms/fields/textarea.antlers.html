@@ -1,0 +1,12 @@
+<textarea
+    name="{{ handle }}"
+    id="{{ id }}"
+    rows="5"
+    class="block w-full px-4 py-3 text-xl text-dark-400 bg-white border border-gray-300 rounded-lg focus:ring-primary focus:border-primary hover:border-primary placeholder:text-gray-600 placeholder:text-xl transition-all"
+    {{ if placeholder }}placeholder="{{ placeholder }}"{{ /if }}
+    {{ if character_limit }}maxlength="{{ character_limit }}"{{ /if }}
+    {{ if js_driver }}{{ js_attributes }}{{ /if }}
+    {{ if validate|contains:required }}required{{ /if }}
+>
+    {{ value }}
+</textarea>

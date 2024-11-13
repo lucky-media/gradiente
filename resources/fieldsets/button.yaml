@@ -1,0 +1,52 @@
+title: Button
+fields:
+  -
+    handle: toggle
+    field:
+      display: 'Toggle Button'
+      type: toggle
+      instructions: 'Display Button'
+  -
+    handle: label
+    field:
+      display: Label
+      type: text
+      if:
+        toggle: 'equals true'
+  -
+    handle: link
+    field:
+      display: Link
+      type: link
+      if:
+        toggle: 'equals true'
+  -
+    handle: target_blank
+    field:
+      display: 'Target Blank'
+      type: toggle
+      instructions: 'Open link in new tab or window.'
+      width: 25
+      if:
+        toggle: 'equals true'
+  -
+    handle: has_icon
+    field:
+      type: toggle
+      display: 'Has icon'
+      width: 25
+      if:
+        toggle: 'equals true'
+  -
+    handle: button_variant
+    field:
+      options:
+        primary: Primary
+        outline: Outline
+        secondary: Secondary
+      default: primary
+      type: button_group
+      display: 'Button Variant'
+      width: 50
+      if:
+        toggle: 'equals true'

@@ -1,0 +1,29 @@
+<nav x-data="{ isMobile: false, isOpen: false }" x-resize="isMobile = ($width < 1024)" aria-labelledby="nav-heading"
+    :aria-expanded="isOpen" class="flex flex-wrap items-center justify-between py-5 container"
+    @keydown.escape="isOpen = false" @click.away="isOpen = false">
+    {{# Logo #}}
+    <a aria-label="logo" href="/">
+        {{ if theme:logo }}
+            {{ partial:components/picture :image="theme:logo" class="object-cover w-auto h-12" }}
+        {{ else }}
+            <span class="text-2xl text-black">
+                {{ theme:sitename }}
+            </span>
+        {{ /if }}
+    </a>
+
+    {{# Toggle button (hidden on large screens) #}}
+    {{ partial:layout/navigation/toggle_menu }}
+    
+    {{# Desktop Menu #}}
+    <div x-show="!isMobile"
+        class="hidden w-full grow lg:flex lg:items-center lg:w-auto lg:space-x-24 space-y-10 lg:space-y-0">
+        {{ partial:layout/navigation/menu }}
+    </div>
+
+    {{# Mobile Menu #}}
+    <div x-show="isMobile" x-cloak class="w-full grow lg:hidden space-y-10"
+        :class="{ 'block': isOpen, 'hidden': !isOpen }">
+        {{ partial:layout/navigation/menu }}
+    </div>
+</nav>

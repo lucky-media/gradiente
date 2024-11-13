@@ -1,0 +1,20 @@
+<div class="bg-white py-16 md:py-20">
+    <div class="container">
+        <div class="items-center space-y-8 md:space-y-0 md:flex">
+            <div class="md:w-1/2">
+                {{ partial:components/heading size="h1" :label="title" class="max-w-xl" }}
+                <div class="max-w-sm">
+                    {{ if rich_text }}
+                        {{ partial:components/rich_text :text="rich_text" size="md" class="mt-5" }}
+                    {{ /if }}
+                    {{ if toggle }}
+                        {{ partial:components/button :title="label" :url="link" class="mt-12" size="sm" variant="{button_variant}" }}
+                    {{ /if }}
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                {{ partial:components/picture cover="true" }}
+            </div>
+        </div>
+    </div>
+</div>

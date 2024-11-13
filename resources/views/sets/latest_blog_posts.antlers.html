@@ -1,0 +1,30 @@
+{{# Save this file without formatting #}}
+
+<div class="container py-16 md:py-24">
+    <div class="max-w-3xl space-y-9">
+        {{ if title }}
+            {{ partial:components/heading :label="title" weight="medium" color="gray" }}
+        {{ /if }}
+        {{ if rich_text }}
+            {{ partial:components/rich_text :text="rich_text" size="xl" color="lightgray" }}
+        {{ /if }}
+    </div>
+
+    <div>
+        {{ collection:posts as="posts" limit="{{ highlight_first ? {{entries_to_show} + 1} : entries_to_show}}" sort="updated_at:desc" }}
+            <ul class="grid gap-10 mt-16 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-20">
+                {{ posts }}
+                    <li class="rounded-4xl overflow-hidden {{ highlight_first && first ?= 'md:col-span-2 lg:col-span-3' }}">
+                        <a href="{{ url }}" aria-label="{{ title }}">
+                            {{ if highlight_first && first }}
+                                {{ partial:partials/large_card }}
+                            {{ else }}
+                                {{ partial:partials/small_card }}
+                            {{ /if }}
+                        </a>
+                    </li>
+                {{ /posts }}
+            </ul>
+        {{ /collection:posts }}
+    </div>
+</div>

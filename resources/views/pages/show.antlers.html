@@ -1,0 +1,7 @@
+{{ blocks }}
+    {{ if variant }}
+        {{ partial src="sets/{type}/{variant}" }}
+    {{ else }}
+        {{ partial src="sets/{type}" }}
+    {{ /if }}
+{{ /blocks }}

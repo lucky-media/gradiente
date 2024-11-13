@@ -1,0 +1,15 @@
+title: 'Logo Cloud'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: logos
+    field:
+      container: assets
+      type: assets
+      display: Logos
+      validate:
+        - required

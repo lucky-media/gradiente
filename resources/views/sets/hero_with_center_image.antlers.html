@@ -1,0 +1,21 @@
+<div class="relative">
+    <div class="bg-gray-300 absolute h-[669px] w-full -z-10"></div>
+    <div class="container pt-32 pb-20 z-10">
+        <div class="flex flex-col items-center space-y-8">
+            <div class="text-center">
+                {{ partial:components/heading size="h1" :label="title" }}
+                <div>
+                    {{ if rich_text }}
+                        {{ partial:components/rich_text :text="rich_text" class="max-w-3xl mx-auto mt-5" size="md" }}
+                    {{ /if }}
+                    {{ if toggle }}
+                        {{ partial:components/button :title="label" :url="link" class="w-max mt-12" size="sm" variant="{button_variant}" }}
+                    {{ /if }}
+                </div>
+            </div>
+            <div class="pt-16">
+                {{ partial:components/picture cover="true" class="max-h-[653px] rounded-xl" }}
+            </div>
+        </div>
+    </div>
+</div>

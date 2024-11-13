@@ -1,0 +1,33 @@
+title: 'Feature Cards'
+fields:
+  -
+    handle: feature_card
+    field:
+      type: replicator
+      display: 'Feature Cards'
+      validate:
+        - required
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            feature_cards:
+              display: 'Feature Cards'
+              icon: layout-three-columns
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                    validate:
+                      - required
+                -
+                  import: rich_text
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Image

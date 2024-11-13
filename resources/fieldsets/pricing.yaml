@@ -1,0 +1,52 @@
+title: Pricing
+fields:
+  -
+    handle: pricing
+    field:
+      type: replicator
+      display: Pricing
+      validate:
+        - required
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            pricing:
+              display: Pricing
+              fields:
+                -
+                  handle: featured
+                  field:
+                    type: toggle
+                    display: Featured
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  import: rich_text
+                -
+                  handle: price
+                  field:
+                    type: text
+                    display: Price
+                    width: 50
+                -
+                  handle: price_description
+                  field:
+                    type: text
+                    display: 'Price Description'
+                    width: 50
+                -
+                  handle: list_title
+                  field:
+                    type: text
+                    display: 'List Title'
+                -
+                  handle: list_field
+                  field:
+                    type: list
+                    display: 'List Field'
+                -
+                  import: button

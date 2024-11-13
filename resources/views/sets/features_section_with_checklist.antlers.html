@@ -1,0 +1,15 @@
+<div class="bg-gray-300">
+    <div class="container py-16 md:py-24">
+        {{ if title }}
+            {{ partial:components/heading :label="title" class="text-center mb-12" weight="medium" }}
+        {{ /if }}
+        <ul class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {{ lists }}
+                <li class="flex items-center space-x-4">
+                    {{ svg src="check" class="size-6 fill-current text-secondary shrink-0" }}
+                    {{ partial:components/paragraph :text="value" color="dark" size="xl" weight="semibold" }}
+                </li>
+            {{ /lists }}
+        </ul>
+    </div>
+</div>

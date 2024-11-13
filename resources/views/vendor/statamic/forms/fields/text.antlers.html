@@ -1,0 +1,8 @@
+<div>
+    <input type="{{ input_type ?? 'text' }}" id="{{ handle }}" name="{{ handle }}" value="{{ value }}"
+        class="block w-full px-6 py-5 text-xl transition-all bg-white border border-[#F0F0F1] placeholder:text-gray-600 placeholder:text-xl rounded-lg text-dark-400 focus:text-primary focus:ring-primary focus:border-primary hover:border-primary"
+        {{ if input_type === 'date' or input_type === 'time' }} onfocus="this.showPicker()" {{ /if }}
+        {{ if placeholder }}placeholder="{{ placeholder }}"{{ /if }}
+        {{ if character_limit }}maxlength="{{ character_limit }}"{{ /if }}
+        {{ if js_driver }}{{ js_attributes }}{{ /if }} {{ if validate|contains:required }}required{{ /if }}>
+</div>

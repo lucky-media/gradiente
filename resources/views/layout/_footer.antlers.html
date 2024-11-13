@@ -1,0 +1,56 @@
+<div class="bg-gray-300 rounded-t-[32px]">
+    <div class="container pb-6 pt-16 md:pt-24">
+        <div class="xl:grid xl:grid-cols-4 xl:gap-8">
+            <div class="space-y-8">
+                {{ partial:components/picture :image="theme:logo" class="object-cover w-auto h-12" }}
+                {{ if theme:footer_description }}
+                    {{ partial:components/rich_text :text="theme:footer_description" size="md" class="mt-5" }}
+                {{ /if }}
+            </div>
+            <div class="mt-16 grid gap-8 col-span-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:mt-0">
+                {{ if theme:has_menu }}
+                    {{ theme:footer_column }}
+                        {{ if type === 'column' }}
+                            <div>
+                                {{ if custom_items }}
+                                    {{ if title }}
+                                        {{ partial:components/heading size="h6" :label="title" weight="semibold" color="gray" }}
+                                    {{ /if }}
+                                    {{ if item }}
+                                        <div class="pt-6 flex flex-col space-y-3">
+                                            {{ item }}
+                                                <a href="{{ link }}" aria-label="{{ label }}">
+                                                    {{ partial:components/paragraph :text="label" color="dark" size="xl" }}
+                                                </a>
+                                            {{ /item }}
+                                        </div>
+                                    {{ /if }}
+                                {{ else }}
+                                    {{ if title }}
+                                        {{ partial:components/heading size="h6" :label="title" weight="semibold" color="gray" }}
+                                    {{ /if }}
+                                    {{ if social_media }}
+                                        <ul class="pt-6 flex space-x-4">
+                                            {{ social_media }}
+                                               <li>
+                                                    <a href="{{ link }}" aria-label="{{ title }}" target="_blank"
+                                                        rel="nofollow">
+                                                        {{ svg src="{name}" class="size-6 fill-current shrink-0 text-gray-900" }}
+                                                    </a>
+                                               </li>
+                                            {{ /social_media }}
+                                        </ul>
+                                    {{ /if }}
+                                {{ /if }}
+                            </div>
+                        {{ /if }}
+                    {{ /theme:footer_column }}
+                {{ /if }}
+            </div>
+        </div>
+        
+        <div class="mt-20 text-center">
+            <p class="text-xl text-gray-600">{{ theme:footer_copyright }}</p>
+        </div>
+    </div>
+</div>

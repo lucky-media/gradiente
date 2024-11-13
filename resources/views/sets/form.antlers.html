@@ -1,0 +1,35 @@
+<div class="container py-16 md:py-20">
+    <div class="max-w-5xl mx-auto border rounded-3xl shadow-xl">
+        {{ form:create :in="form:handle" }}
+            <div class="pt-6 pb-5 px-7 md:pt-16 md:pb-10 md:px-14">
+                {{ if errors }}
+                    {{ partial:partials/error_state class="mb-8" }}
+                {{ /if }}
+                {{ if success }}
+                    {{ partial:partials/success_state class="mb-8" }}
+                {{ /if }}
+                
+                <div class="grid gap-8 md:grid-cols-12">
+                    {{ fields }}
+                        <div class="{{ width == '25' ?= 'md:col-span-3' }}
+                            {{ width == '33' ?= 'md:col-span-4' }}
+                            {{ width == '50' ?= 'md:col-span-6' }}
+                            {{ width == '66' ?= 'md:col-span-8' }}
+                            {{ width == '75' ?= 'md:col-span-9' }}
+                            {{ width == '100' ?= 'md:col-span-12' }}">
+                            <div>{{ field }}</div>
+                            {{ if error }}
+                                <p class="text-red-500 mt-4">{{ error }}</p>
+                            {{ /if }}
+                        </div>
+                    {{ /fields }}
+                    <input type="text" class="hidden" name="{{ honeypot ?? 'honeypot' }}">
+                </div>
+
+                <div class="flex justify-end">
+                    {{ partial:components/button button_type="submit" url="false" size="medium" title="Start For Free" class="mt-10 font-medium" }}
+                </div>
+            </div>
+        {{ /form:create }}
+    </div>
+</div>

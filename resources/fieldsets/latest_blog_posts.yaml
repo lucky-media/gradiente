@@ -1,0 +1,31 @@
+title: 'Latest Blog Posts'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+      validate:
+        - required
+  -
+    import: rich_text
+  -
+    handle: entries_to_show
+    field:
+      options:
+        3: Three
+        6: Six
+        9: Nine
+      default: '3'
+      type: button_group
+      display: 'Number of Posts'
+      instructions: 'How many latest posts to show?'
+      width: 50
+  -
+    handle: highlight_first
+    field:
+      default: true
+      type: toggle
+      display: 'Highlight First'
+      instructions: 'When enabled, the first blog post will be highlighted.'
+      width: 50

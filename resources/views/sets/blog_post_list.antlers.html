@@ -1,0 +1,35 @@
+{{# Save this file without formatting #}}
+
+<div class="container py-16 md:py-20">
+    {{ if title or description }}
+        <div class="max-w-2xl space-y-9 mb-16">
+            {{ if title }}
+                {{ partial:components/heading :label="title" weight="medium" color="gray" }}
+            {{ /if }}
+            {{ if description }}
+                {{ partial:components/heading size="h4" :label="description" color="lightgray" }}
+            {{ /if }}
+        </div>
+    {{ /if }}
+
+    <div>
+        {{ collection:posts as="posts" paginate="{{ highlight_first ? {{posts_per_page} + 1} : posts_per_page}}" sort="updated_at:desc" }}
+            <ul class="grid gap-10 lg:gap-x-8 lg:gap-y-20 md:grid-cols-2 lg:grid-cols-3">
+                {{ posts }}
+                    <li class="rounded-4xl overflow-hidden {{ highlight_first && first ?= 'md:col-span-2 lg:col-span-3' }}">
+                        <a href="{{ url }}" aria-label="{{ title }}">
+                            {{ if highlight_first && first }}
+                                {{ partial:partials/large_card }}
+                            {{ else }}
+                                {{ partial:partials/small_card }}
+                            {{ /if }}
+                        </a>
+                    </li>
+                {{ /posts }}
+            </ul>
+            <div class="mx-auto">
+                {{ partial:partials/paginate }}
+            </div>
+        {{ /collection:posts }}
+    </div>
+</div>

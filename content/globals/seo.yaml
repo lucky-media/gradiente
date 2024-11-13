@@ -1,0 +1,11 @@
+title: SEO
+data:
+  sitename: Gradiente
+  append_on_title: Gradiente
+  meta_description: 'Discover our all-in-one SaaS solution designed to streamline your business operations. From project management to customer engagement, our platform offers seamless integration, robust security, and scalable features to drive your success.'
+  display_og_tags: true
+  og_description: 'Discover our all-in-one SaaS solution designed to streamline your business operations. From project management to customer engagement, our platform offers seamless integration, robust security, and scalable features to drive your success.'
+  og_image: og-image.jpg
+  display_twitter_tags: true
+  sitemap_change_frequency: weekly
+  sitemap_priority: 0.5

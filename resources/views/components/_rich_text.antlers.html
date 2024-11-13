@@ -1,0 +1,17 @@
+---
+base: 'prose prose-lg'
+sizes:
+    xl: 'text-xl md:text-[32px]'
+    lg: 'text-lg md:text-2xl'
+    md: 'text-xl'
+    base: 'text-base'
+colors:
+    darkgray: 'text-gray-900'
+    gray: 'text-gray-600'
+    lightgray: 'text-gray-500'
+    white: 'text-white'
+---
+
+<div class="{{ view }} {{ sizes[size] ? sizes[size] : sizes['xl'] }} {{ colors[color] ? colors[color] : colors['darkgray'] }} {{ /view }} {{ class }}">
+    {{ text }}
+</div>

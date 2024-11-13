@@ -1,0 +1,27 @@
+<div class="container py-24 md:py-32 mx-auto">
+    <div class="text-center">
+        {{ if title }}
+            {{ partial:components/heading :label="title" weight="medium" class="mb-5" }}
+        {{ /if }}
+        {{ if rich_text }}
+            {{ partial:components/rich_text :text="rich_text" size="base" class="max-w-3xl mx-auto" }}
+        {{ /if }}
+    </div>
+
+    <ul
+        class="grid {{ team | count > 3 ? "lg:grid-cols-4" : "lg:grid-cols-3" }} gap-8 mt-12 sm:grid-cols-2 md:grid-cols-2">
+        {{ team }}
+            <li class="text-center">
+                {{ if image }}
+                    <div class="rounded-2xl h-[270px] w-full overflow-hidden">
+                        {{ partial:components/picture cover="true" }}
+                    </div>
+                {{ /if }}
+                {{ partial:components/heading :label="title" size="h5" weight="bold" class="mt-5 mb-2" }}
+                {{ if position }}
+                    {{ partial:components/paragraph :text="position" class="font-normal" }}
+                {{ /if }}
+            </li>
+        {{ /team }}
+    </ul>
+</div>

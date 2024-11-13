@@ -1,0 +1,9 @@
+{
+    "name": "lucky-media/gradiente",
+    "extra": {
+        "statamic": {
+            "name": "Gradiente",
+            "description": "Gradiente starter kit"
+        }
+    }
+}

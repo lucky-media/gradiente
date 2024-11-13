@@ -1,0 +1,126 @@
+title: Theme
+data:
+  sitename: Gradiente
+  logo: logo.png
+  favicon: favicons/favicon.ico
+  favicon_256: favicons/android-chrome-192x192.png
+  favicon_192: favicons/android-chrome-192x192.png
+  favicon_180: favicons/apple-touch-icon.png
+  favicon_32: favicons/favicon-32x32.png
+  favicon_16: favicons/favicon-16x16.png
+  toggle: true
+  label: Buy
+  link: '#'
+  target_blank: false
+  has_icon: false
+  button_variant: primary
+  has_menu: true
+  footer_menu: navigation
+  custom_column: true
+  footer_column:
+    -
+      id: lxj3ri2x
+      title: Product
+      custom_items: true
+      item:
+        -
+          id: lxj3xqor
+          type: text
+          label: 'Link One'
+          has_icon: false
+        -
+          id: lxj3y278
+          type: text
+          label: 'Link Two'
+          has_icon: false
+        -
+          id: lxk74lho
+          label: 'Link Three'
+        -
+          id: lxk74wfn
+          label: 'Link Fourth'
+      type: column
+      enabled: true
+    -
+      id: lxk75d8c
+      title: Legal
+      custom_items: true
+      item:
+        -
+          id: lxj3xqor
+          type: text
+          label: 'Link One'
+          has_icon: false
+        -
+          id: lxj3y278
+          type: text
+          label: 'Link Two'
+          has_icon: false
+        -
+          id: lxk74lho
+          label: 'Link Three'
+        -
+          id: lxk74wfn
+          label: 'Link Fourth'
+      type: column
+      enabled: true
+    -
+      id: lxk75cga
+      title: Company
+      custom_items: true
+      item:
+        -
+          id: lxj3xqor
+          type: text
+          label: 'Link One'
+          has_icon: false
+        -
+          id: lxj3y278
+          type: text
+          label: 'Link Two'
+          has_icon: false
+        -
+          id: lxk74lho
+          label: 'Link Three'
+        -
+          id: lxk74wfn
+          label: 'Link Fourth'
+      type: column
+      enabled: true
+    -
+      id: lxk6lp8w
+      title: 'Follow us'
+      custom_items: false
+      type: column
+      enabled: true
+      social_media:
+        -
+          id: lxlrd1j3
+          name: facebook
+        -
+          id: lxlrd3hl
+          name: instagram
+  footer_copyright: '© Copyright {{ now format="Y" }} Gradiente.  All rights reserved.'
+  title: 'Start Building for Free'
+  buttons:
+    -
+      id: lycp9rh9
+      toggle: true
+      label: 'Get Started'
+      link: '#'
+      target_blank: false
+      has_icon: false
+      button_variant: primary
+      type: button
+      enabled: true
+  error_image: 404.png
+  error_description:
+    -
+      type: paragraph
+      attrs:
+        textAlign: left
+      content:
+        -
+          type: text
+          text: "Looks like we are missing some page, or you typed something wrong in the URL, here's a way to get back"
+  error_button_text: 'Go back'

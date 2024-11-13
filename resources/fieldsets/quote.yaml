@@ -1,0 +1,9 @@
+title: Quote
+fields:
+  -
+    import: rich_text
+  -
+    handle: author
+    field:
+      type: text
+      display: Author

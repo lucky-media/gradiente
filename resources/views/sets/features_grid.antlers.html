@@ -1,0 +1,28 @@
+<div class="container py-16 md:py-20">
+    <div class="space-y-9">
+        {{ if title }}
+            {{ partial:components/heading :label="title" weight="medium" class="max-w-5xl" }}
+        {{ /if }}
+        {{ if rich_text }}
+            {{ partial:components/rich_text :text="rich_text" color="lightgray" class="md:prose-p:leading-[40px] max-w-3xl" }}
+        {{ /if }}
+        {{ if toggle }}
+            {{ partial:components/button :title="label" :url="link" variant="{button_variant}" }}
+        {{ /if }}
+    </div>
+    <ul class="grid gap-12 mt-20 md:grid-cols-2">
+        {{ features }}
+            <li class="bg-gray-300 rounded-4xl overflow-hidden">
+                <div class="text-center pt-11 pb-20 px-3">
+                    {{ partial:components/heading size="h3" :label="title" weight="medium" color="gray" class="mb-3" }}
+                    {{ if rich_text }}
+                        {{ partial:components/rich_text :text="rich_text" size="md" color="lightgray" class="max-w-md mx-auto" }}
+                    {{ /if }}
+                </div>
+                {{ if image }}
+                    {{ partial:components/picture cover="true" }}
+                {{ /if }}
+            </li>
+        {{ /features }}
+    </ul>
+</div>

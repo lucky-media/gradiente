@@ -1,0 +1,18 @@
+title: CTA
+fields:
+  -
+    handle: variant
+    field:
+      options:
+        variant_1: 'Variant 1'
+        variant_2: 'Variant 2'
+      type: button_group
+      display: Variant
+      default: variant_1
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    import: rich_text

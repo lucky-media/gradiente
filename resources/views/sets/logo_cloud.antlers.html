@@ -1,0 +1,18 @@
+<div class="container py-16 md:py-20">
+    <div class="{{ title ?= 'md:flex' }} items-center space-y-8 md:space-y-0">
+        {{ if title }}
+            <div class="md:w-1/2">
+                {{ partial:components/heading size="h4" :label="title" weight="normal" color="lightgray" }}
+            </div>
+        {{ /if }}
+        <div class="{{ title ?= 'md:w-1/2' }}">
+            <ul class="grid grid-cols-3 gap-12 md:gap-12">
+                {{ logos }}
+                    <li class="min-h-5 lg:min-h-8">
+                        {{ partial:components/picture :image="url" class="max-h-9 w-max mx-auto {title ?= 'mx-auto'}" }}
+                    </li>
+                {{ /logos }}
+            </ul>
+        </div>
+    </div>
+</div>

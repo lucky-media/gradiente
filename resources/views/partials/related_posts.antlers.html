@@ -1,0 +1,18 @@
+<div class="container py-12">
+    <div class="space-y-9 max-w-3xl">
+        {{ partial:components/heading label="See also" weight="medium" }}
+        {{ partial:components/rich_text text="<p>Ultimate tools built specifically for video streaming, engineered by experts, approved by industry leaders.</p>" size="xl" color="lightgray" class="md:prose-p:leading-[40px]" }}
+    </div>
+
+    {{ collection:posts as="posts" limit="3" :id:not="id" sort="random" }}
+        <ul class="grid gap-10 mt-16 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-20">
+            {{ posts }}
+                <li class="rounded-4xl overflow-hidden">
+                    <a href="{{ url }}" aria-label="{{ title }}">
+                        {{ partial:partials/small_card }}
+                    </a>
+                </li>
+            {{ /posts }}
+        </ul>
+    {{ /collection:posts }}
+</div>

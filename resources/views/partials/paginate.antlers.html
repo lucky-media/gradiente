@@ -1,0 +1,65 @@
+{{ paginate }}
+    {{ if prev_page || next_page }}
+        <div class="py-10 col-12 lg:py-20">
+            <ul class="flex items-center justify-center space-x-3">
+                {{ links:segments }}
+                    {{ first }}
+                        {{ if page == current_page }}
+                            <li>
+                                <span class="px-5 py-3 bg-primary text-white rounded-xl">
+                                    {{ page }}
+                                </span>
+                            </li>
+                        {{ else }}
+                            <a href="{{ url }}" aria-label="{{ page }}">
+                                <li class="hover:text-primary px-5 py-3 rounded-xl">
+                                    {{ page }}
+                                </li>
+                            </a>
+                        {{ /if }}
+                    {{ /first }}
+                    {{ if slider }}
+                        <li class="disabled:opacity-50" disabled>
+                            <span>...</span>
+                        </li>
+                    {{ /if }}
+                    {{ slider }}
+                        {{ if page == current_page }}
+                            <li class="active">
+                                <span>
+                                    {{ page }}
+                                </span>
+                            </li>
+                        {{ else }}
+                            <li>
+                                <a href="{{ url }}" aria-label="{{ page }}">
+                                    {{ page }}
+                                </a>
+                            </li>
+                        {{ /if }}
+                    {{ /slider }}
+                    {{ if slider || (!slider && last) }}
+                        <li class="disabled:opacity-50" disabled>
+                            <span>...</span>
+                        </li>
+                    {{ /if }}
+                    {{ last }}
+                        {{ if page == current_page }}
+                            <li class="active">
+                                <span>
+                                    {{ page }}
+                                </span>
+                            </li>
+                        {{ else }}
+                            <li>
+                                <a href="{{ url }}" aria-label="{{ page }}">
+                                    {{ page }}
+                                </a>
+                            </li>
+                        {{ /if }}
+                    {{ /last }}
+                {{ /links:segments }}
+            </ul>
+        </div>
+    {{ /if }}
+{{ /paginate }}

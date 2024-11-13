@@ -1,0 +1,12 @@
+<div class="bg-gray-300 flex flex-col h-full overflow-hidden">
+    {{ partial:components/picture :image="post_cover" cover="true" class="w-full max-h-[202px] shrink-0 overflow-hidden" }}
+    <div class="px-6 py-9 w-full h-full flex flex-col justify-between">
+        <div>
+            <p class="text-primary mb-2.5">{{ content | read_time }} min read</p>
+            {{ partial:components/heading size="h5" :label="title" color="gray" }}
+            {{ if short_description }}
+                <p class="mt-6 text-lg text-gray-600">{{ short_description }}</p>
+            {{ /if }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,169 @@
+title: 'Page Builder'
+fields:
+  -
+    handle: blocks
+    field:
+      type: replicator
+      display: Blocks
+      collapse: true
+      sets:
+        hero_section:
+          display: 'Hero Section'
+          icon: layout-grid-dots
+          sets:
+            hero_with_image_right:
+              display: 'Hero with Image Right'
+              icon: align-right
+              fields:
+                -
+                  import: hero_with_image
+            hero_with_center_image:
+              display: 'Hero with Center Image'
+              icon: align-object-bottom
+              fields:
+                -
+                  import: hero_with_image
+        cta_sections:
+          display: 'CTA Sections'
+          icon: align-object-center
+          sets:
+            cta_with_stats:
+              display: 'CTA with Stats'
+              icon: layout-sidebar-split-right
+              fields:
+                -
+                  import: cta_with_stats
+            cta_simple:
+              display: 'CTA Simple'
+              icon: form-date-picker
+              fields:
+                -
+                  import: cta_section
+            cta:
+              display: CTA
+              icon: layout-carousel-horizontal
+              fields:
+                -
+                  import: cta
+        logo_cloud:
+          display: 'Logo Cloud'
+          icon: layout-grid-dots
+          sets:
+            logo_cloud:
+              display: 'Logo Cloud'
+              icon: layout-grid-dots
+              fields:
+                -
+                  import: logo_cloud
+        features_section:
+          display: 'Features Section'
+          icon: dashboard-layout-2
+          sets:
+            features_grid:
+              display: 'Features Grid'
+              icon: layout-split-verical
+              fields:
+                -
+                  import: features_section
+            features_section_icons:
+              display: 'Features Section Icons'
+              icon: setting-menu-horizontal-dots
+              fields:
+                -
+                  import: features_section
+        blog_sections:
+          display: 'Blog Sections'
+          icon: mail-chat-bubble-text
+          sets:
+            latest_blog_posts:
+              display: 'Latest Blog Posts'
+              icon: dashboard-layout
+              fields:
+                -
+                  import: latest_blog_posts
+            blog_post_list:
+              display: 'Blog Post List'
+              icon: content-book-open
+              fields:
+                -
+                  import: blog_post_list
+        faq_section:
+          display: 'FAQ Section'
+          icon: file-content-list
+          sets:
+            faq:
+              display: FAQ
+              icon: alert-help-question
+              fields:
+                -
+                  import: faq
+        quote:
+          display: Quote
+          icon: text-formatting-quotation
+          sets:
+            quote:
+              display: Quote
+              icon: text-formatting-quotation
+              fields:
+                -
+                  import: quote
+        team:
+          display: Team
+          icon: user-multiple
+          sets:
+            team:
+              display: Team
+              icon: user-multiple
+              fields:
+                -
+                  import: team
+        feature_cards:
+          display: 'Feature Cards'
+          icon: layout-three-columns
+          sets:
+            feature_cards:
+              display: 'Feature Cards'
+              icon: layout-three-columns
+              fields:
+                -
+                  import: feature_cards
+        feature_sections:
+          display: 'Feature Sections'
+          icon: favorite-like
+          sets:
+            features_section_with_checklist:
+              display: 'Features Section with Checklist'
+              icon: favorite-like
+              fields:
+                -
+                  import: features_section_with_checklist
+        image_with_text_and_checklist:
+          display: 'Image with Text and Checklist'
+          icon: text-formatting-image-left
+          sets:
+            image_with_text_and_checklist:
+              display: 'Image with Text and Checklist'
+              icon: text-formatting-image-left
+              fields:
+                -
+                  import: image_with_text_and_checklist
+        form:
+          display: Form
+          icon: mail-inbox-content
+          sets:
+            form:
+              display: Form
+              icon: phone-contact-phonebook
+              fields:
+                -
+                  import: form
+        pricing:
+          display: Pricing
+          icon: money-cash-bill
+          sets:
+            pricing:
+              display: Pricing
+              icon: money-cash-bill
+              fields:
+                -
+                  import: pricing

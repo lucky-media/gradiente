@@ -1,0 +1,48 @@
+title: 'Image with Text and Checklist'
+fields:
+  -
+    handle: image_with_text_and_checklist
+    field:
+      type: replicator
+      display: 'Image with Text and Checklist'
+      validate:
+        - required
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            image_with_text_and_checklist:
+              display: 'Image with Text and Checklist'
+              fields:
+                -
+                  handle: position
+                  field:
+                    options:
+                      left: 'Image on the Left'
+                      right: 'Image on the Right'
+                    default: right
+                    type: button_group
+                    display: Position
+                -
+                  handle: image
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Image
+                    validate:
+                      - required
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                    validate:
+                      - required
+                -
+                  import: rich_text
+                -
+                  handle: lists
+                  field:
+                    type: list
+                    display: Lists

@@ -1,0 +1,25 @@
+<div class="container py-16 md:py-20">
+    <div class="space-y-20">
+        {{ image_with_text_and_checklist }}
+            <div class="flex flex-wrap lg:flex-nowrap md:items-center space-y-8 lg:space-y-0">
+                <div class="lg:w-1/2 {{ position == "right" ? 'lg:order-first' : 'lg:order-last' }}">
+                    {{ partial:components/heading :label="title" weight="medium" class="my-8 lg:mb-5" }}
+                    {{ if rich_text }}
+                        {{ partial:components/rich_text :text="rich_text" color="gray" size="md" class="max-w-lg mb-20" }}
+                    {{ /if }}
+                    {{ if lists }}
+                        {{ lists }}
+                            <div class="flex items-center space-x-4 mt-4">
+                                {{ svg src="check" class="size-6 fill-current shrink-0 text-secondary" }}
+                                {{ partial:components/paragraph :text="value" size="xl" }}
+                            </div>
+                        {{ /lists }}
+                    {{ /if }}
+                </div>
+                <div class="max-w-2xl {{ position == "right" ? 'lg:ml-8 ml-0' : 'lg:mr-8 mr-0' }}">
+                    {{ partial:components/picture cover="true" }}
+                </div>
+            </div>
+        {{ /image_with_text_and_checklist }}
+    </div>
+</div>

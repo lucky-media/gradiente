@@ -1,0 +1,22 @@
+export_paths:
+  - app/Http/Controllers/DynamicToken.php
+  - app/Tags/LuckySeo.php
+  - config/statamic/assets.php
+  - content
+  - resources/sites.yaml
+  - resources/blueprints
+  - resources/fieldsets
+  - resources/forms
+  - resources/css
+  - resources/js
+  - resources/svg
+  - resources/views
+  - public/assets
+  - public/build
+  - routes/web.php
+  - package.json
+  - tailwind.config.js
+  - vite.config.js
+  - postcss.config.js
+  - .env.example
+  - README.md

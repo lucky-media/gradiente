@@ -1,0 +1,21 @@
+<div class="container py-16 md:py-20">
+    <ul class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {{ feature_card }}
+            <li class="flex justify-between flex-col overflow-hidden rounded-2xl bg-gray-300 px-7 drop-shadow py-9">
+                <div>
+                    {{ if title }}
+                        {{ partial:components/heading :label="title" weight="medium" size="h5" color="dark" class="mb-3" }}
+                    {{ /if }}
+                    {{ if rich_text }}
+                        {{ partial:components/rich_text :text="rich_text" color="lightgray" size="md" }}
+                    {{ /if }}
+                </div>
+                {{ if image }}
+                    <div class="mt-10 mb-7 mx-auto min-h-[220px] md:mt-20">
+                        {{ partial:components/picture cover="true" class="max-h-[219px]" }}
+                    </div>
+                {{ /if }}
+            </li>
+        {{ /feature_card }}
+    </ul>
+</div>

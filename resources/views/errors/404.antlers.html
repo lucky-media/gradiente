@@ -1,0 +1,13 @@
+<div class="bg-gray-300 py-32">
+    <div class="container">
+        <div class="mx-auto max-w-xl text-center">
+            {{ if theme:error_image }}
+                {{ partial:components/picture :image="theme:error_image" cover="true" class="max-h-[312px]" }}
+            {{ /if }}
+            {{ if theme:error_description }}
+                {{ partial:components/rich_text :text="theme:error_description" size="md" color="darkgray" class="my-[30px]" }}
+            {{ /if }}
+            {{ partial:components/button :title="theme:error_button_text" url="/" class="w-[192px]" }}
+        </div>
+    </div>
+</div>

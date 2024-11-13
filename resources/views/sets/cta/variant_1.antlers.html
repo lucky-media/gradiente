@@ -1,0 +1,8 @@
+<div class="bg-gray-300 py-32 text-center px-4">
+    {{ if title }}
+        {{ partial:components/heading :label="title" size="h1" class="max-w-5xl mx-auto" }}
+    {{ /if }}
+    {{ if rich_text }}
+        {{ partial:components/rich_text :text="rich_text" color="darkgray" size="md" class="mt-8 max-w-[640px] mx-auto" }}
+    {{ /if }}
+</div>

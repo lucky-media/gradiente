@@ -1,0 +1,54 @@
+title: 'CTA with Stats'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+      validate:
+        - required
+  -
+    import: rich_text
+  -
+    handle: buttons
+    field:
+      max_sets: 2
+      fullscreen: false
+      type: replicator
+      display: Buttons
+      collapse: accordion
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            button:
+              display: Button
+              fields:
+                -
+                  import: button
+  -
+    handle: stats
+    field:
+      type: replicator
+      display: Stats
+      validate:
+        - required
+      collapse: accordion
+      max_sets: 4
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                    always_save: false
+                    validate:
+                      - required
+                -
+                  import: rich_text

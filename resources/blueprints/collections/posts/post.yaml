@@ -1,0 +1,119 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: short_description
+            field:
+              character_limit: '240'
+              type: textarea
+              display: 'Short Description'
+          -
+            handle: post_cover
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Post Cover'
+              validate:
+                - required
+          -
+            handle: content
+            field:
+              buttons:
+                - h2
+                - h3
+                - h4
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+              remove_empty_nodes: false
+              type: bard
+              display: Content
+              sets:
+                main:
+                  display: Main
+                  sets:
+                    image:
+                      display: Image
+                      icon: media-image-picture-orientation
+                      fields:
+                        -
+                          handle: image
+                          field:
+                            max_files: 1
+                            container: assets
+                            type: assets
+                            display: Image
+                        -
+                          handle: caption
+                          field:
+                            type: text
+                            display: Caption
+                    quote:
+                      display: Quote
+                      icon: text-formatting-quotation
+                      fields:
+                        -
+                          handle: description
+                          field:
+                            type: textarea
+                            display: Description
+                        -
+                          handle: author
+                          field:
+                            type: text
+                            display: Author
+                    video:
+                      display: Video
+                      icon: media-webcam-video
+                      fields:
+                        -
+                          handle: video
+                          field:
+                            type: video
+                            display: Video
+                    gallery:
+                      display: Gallery
+                      icon: media-image-picture-gallery
+                      fields:
+                        -
+                          handle: images
+                          field:
+                            container: assets
+                            type: assets
+                            display: Images
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+title: Post

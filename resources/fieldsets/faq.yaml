@@ -1,0 +1,30 @@
+title: FAQ
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: Title
+  -
+    handle: faq_items
+    field:
+      type: replicator
+      display: 'FAQ Items'
+      validate:
+        - required
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                    validate:
+                      - required
+                -
+                  import: rich_text

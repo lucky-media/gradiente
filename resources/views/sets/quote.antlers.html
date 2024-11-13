@@ -1,0 +1,8 @@
+<div class="container py-16 md:py-20">
+    {{ if rich_text }}
+        {{ partial:components/rich_text :text="rich_text" class="md:prose-p:text-[42px] prose-p:text-xl prose-p:leading-[50.4px] prose-p:text-center prose-p:font-bold max-w-4xl mx-auto" }}
+    {{ /if }}
+    {{ if author }}
+        {{ partial:components/paragraph :text="'- ' + author" size="lg" class="text-center mt-5" }}
+    {{ /if }}
+</div>

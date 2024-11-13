@@ -1,0 +1,19 @@
+title: 'Rich Text'
+fields:
+  -
+    handle: rich_text
+    field:
+      buttons:
+        - bold
+        - italic
+        - underline
+        - strikethrough
+        - anchor
+        - alignleft
+        - aligncenter
+        - alignright
+        - alignjustify
+      toolbar_mode: floating
+      remove_empty_nodes: false
+      type: bard
+      antlers: true

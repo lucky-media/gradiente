@@ -1,0 +1,38 @@
+---
+base: 'group w-max inline-flex items-center justify-center transition duration-200 ease-in-out rounded-xl border-[1px]/50 font-medium'
+variants:
+  primary: 'bg-primary text-white'
+  outline: 'bg-white text-primary shadow-lg border-[1px] border-gray-500/10'
+  secondary: 'text-secondary'
+sizes:
+   sm: 'py-3.5 px-6'
+   base: 'py-3.5 px-9'
+icons:
+   primary: 'text-primary'
+   outline: 'text-primary'
+   secondary: 'text-secondary'
+---
+
+{{ if url }}
+    <a href="{{ url }}" aria-label="{{ title }}" target="{{ target_blank ? '_blank' : '_self' }}" class="{{ view }} {{ base }} {{ variant ? view:variants[variant] : view:variants['primary'] }} {{ sizes[size] ? sizes[size] : sizes['base'] }} {{ /view }} {{ class }}">
+        <span>
+            {{ title }}
+        </span>
+        {{ if icon }}
+            <div class="{{ view }} {{ icons[icon_color] ? icons[icon_color] : icons['white'] }} {{ /view }}">
+                {{ svg src="right-arrow" class="size-6 shrink-0 fill-current ml-2 {view:icons[icon_color]}" }}
+            </div>
+        {{ /if }}
+    </a>
+{{ else }}
+    <button type="{{ button_type or 'submit' }}" class="{{ view }} {{ base }} {{ variant ? view:variants[variant] : view:variants['primary'] }} {{ sizes[size] ? sizes[size] : sizes['base'] }} {{ /view }} {{ class }}">
+        <span>
+            {{ title }} 
+        </span>
+        {{ if icon }}
+            <div class="ml-10 {{ view }} {{ icons[icon_color] ? icons[icon_color] : icons['white'] }} {{ /view }}">
+                {{ svg src="right-arrow" class="size-6 shrink-0 fill-current ml-2 {view:icons[icon_color]}" }}
+            </div>
+        {{ /if }}
+    </button>
+{{ /if }}

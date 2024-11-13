@@ -1,0 +1,32 @@
+<div class="container py-16 md:py-20">
+    {{ if title }}
+        {{ partial:components/heading :label="title" weight="semibold" class="mb-10" }}
+    {{ /if }}
+    <ul class="flex flex-col divide-y-2 border-b-2 border-gray-600 divide-gray-600">
+        {{ faq_items }}
+            <li>
+                <div x-data="{ expanded: false }">
+                    <button @click="expanded = !expanded" @mousedown.outside="expanded == false"
+                        class="flex items-center space-x-6 py-8 w-full">
+                        <div>
+                            <div x-show="!expanded">
+                                {{ svg src="plus" class="size-7 shrink-0" }}
+                            </div>
+                            <div x-cloak x-show="expanded">
+                                {{ svg src="minus" class="size-7 shrink-0" }}
+                            </div>
+                        </div>
+                        {{ partial:components/heading size="h4" :label="title" weight="normal" class="text-left" }}
+                    </button>
+                    {{ if rich_text }}
+                        <div x-show="expanded" @click.outside="expanded = false" x-collapse.duration.500ms x-cloak>
+                            <div class="pb-8">
+                                {{ partial:components/rich_text :text="rich_text" size="lg" color="gray" }}
+                            </div>
+                        </div>
+                    {{ /if }}
+                </div>
+            </li>
+        {{ /faq_items }}
+    </ul>
+</div>

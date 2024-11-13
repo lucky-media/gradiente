@@ -1,0 +1,31 @@
+<div class="py-16 md:py-24" style="background-image: url(/assets/background-gradient.png)">
+    <div class="container z-20">
+        <div class="justify-between space-y-8 md:space-y-0 md:flex">
+            <div class="md:w-1/2">
+                {{ partial:components/heading size="h1" :label="title" color="white" class="max-w-xl" }}
+                {{ if rich_text }}
+                    {{ partial:components/rich_text :text="rich_text" size="xl" color="white" class="md:prose-p:leading-[40px] mt-8 max-w-lg" }}
+                {{ /if }}
+                {{ if buttons }}
+                    <div class="flex flex-col mt-8 lg:flex-row lg:space-x-8">
+                        {{ buttons }}
+                            {{ partial:components/button :title="label" :url="link" variant="{button_variant}" class="mr-2 mt-4 !w-full lg:!w-max" }}
+                        {{ /buttons }}
+                    </div>
+                {{ /if }}
+            </div>
+            <div class="md:w-1/3">
+                <ul class="flex flex-col space-y-[70px]">
+                    {{ stats }}
+                        <li>
+                            {{ partial:components/heading size="h4" :label="title" color="white" weight="semibold" class="max-w-xl" }}
+                            {{ if rich_text }}
+                                {{ partial:components/rich_text :text="rich_text" color="white" size="md" class="max-w-xl mt-1" }}
+                            {{ /if }}
+                        </li>
+                    {{ /stats }}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

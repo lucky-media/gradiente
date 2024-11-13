@@ -1,0 +1,8 @@
+{{ if video | is_embeddable }}
+    <div class="py-5">
+        <div class="relative overflow-hidden pt-[56.25%]">
+            <iframe src="{{ video | embed_url }}" frameborder="0" allowfullscreen
+                class="absolute inset-0 w-full h-full border-0"></iframe>
+        </div>
+    </div>
+{{ /if }}

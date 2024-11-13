@@ -1,0 +1,14 @@
+<div class="flex flex-col lg:flex-row lg:items-stretch">
+    <div class="relative overflow-hidden w-full lg:max-w-[400px] xl:max-w-[500px]">
+        {{ partial:components/picture :image="post_cover" cover="true" }}
+    </div>
+    <div class="w-full bg-gray-300">
+        <div class="px-12 py-6 flex flex-col justify-between md:px-[70px] md:py-12">
+            <p class="text-primary mb-2.5">{{ content | read_time }} min read</p>
+            {{ partial:components/heading :label="title" color="gray" }}
+            {{ if short_description }}
+                <p class="mt-6 text-lg text-gray-600 flex-grow">{{ short_description }}</p>
+            {{ /if }}
+        </div>
+    </div>
+</div>
