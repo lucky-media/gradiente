@@ -1,7 +1,7 @@
 <div class="container py-16 md:py-20">
     <ul class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {{ feature_card }}
-            <li class="flex justify-between flex-col overflow-hidden rounded-2xl bg-gray-300 px-7 drop-shadow py-9">
+            <li class="flex justify-between flex-col overflow-hidden rounded-2xl bg-gray-300 px-7 drop-shadow-sm py-9">
                 <div>
                     {{ if title }}
                         {{ partial:components/heading :label="title" weight="medium" size="h5" color="dark" class="mb-3" }}

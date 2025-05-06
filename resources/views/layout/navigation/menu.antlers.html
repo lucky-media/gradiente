@@ -1,14 +1,14 @@
 <ul id="nav-list"
-    class="flex-wrap px-2 items-center justify-end list-reset flex-1 pt-8 space-y-5 lg:space-y-0 lg:pt-0 lg:flex lg:space-x-10">
+    class="flex-wrap px-2 lg:items-center justify-end list-reset flex-1 pt-8 gap-5 lg:pt-0 flex lg:flex-row flex-col lg:gap-10">
     {{ nav:navigation }}
         <li>
-            <a href="{{ url }}" aria-label="{{ title }}" class="text-xl text-gray-800 lg:text-lg" @click="isOpen = false">
+            <a href="{{ url }}" aria-label="{{ title }}" class="text-xl text-gray-800 lg:text-lg"
+                @click="isOpen = false">
                 {{ title }}
             </a>
         </li>
     {{ /nav:navigation }}
 </ul>
-
 {{ if theme:toggle }}
     {{ partial:components/button :title="theme:label" :url="theme:link" variant="{theme:button_variant}" }}
 {{ /if }}

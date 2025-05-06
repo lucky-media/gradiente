@@ -2,7 +2,7 @@
 
 <div class="container py-16 md:py-20">
     {{ if title or description }}
-        <div class="max-w-2xl space-y-9 mb-16">
+        <div class="max-w-2xl flex flex-col gap-y-9 mb-16">
             {{ if title }}
                 {{ partial:components/heading :label="title" weight="medium" color="gray" }}
             {{ /if }}

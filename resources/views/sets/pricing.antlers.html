@@ -3,15 +3,15 @@
         <ul class="grid place-items-center gap-x-12 gap-y-12 md:gap-x-0 lg:grid-cols-3">
             {{ pricing }}
                 <li
-                    class="border flex flex-col justify-between w-full pt-11 px-8 pb-6 {{ featured ? 'space-y-[125px] border-primary border-2 transform bg-white lg:scale-[1.025] rounded-3xl' : 'rounded-xl space-y-8  border-gray-200' }}">
+                    class="border flex flex-col justify-between w-full pt-11 px-8 pb-6 {{ featured ? 'gap-y-[125px] border-primary border-2 transform bg-white lg:scale-[1.025] rounded-3xl' : 'rounded-xl gap-y-8  border-gray-200' }}">
                     <div>
                         {{ partial:components/heading size="h3" :label="title" color="gray" weight="medium" class="text-center" }}
                         {{ if rich_text }}
                             {{ partial:components/rich_text :text="rich_text" size="md" class="mt-2 max-w-xs mx-auto prose-p:text-center text-gray-900" }}
                         {{ /if }}
-                        <div class="mt-10 flex items-center justify-center space-x-2">
+                        <div class="mt-10 flex items-center justify-center gap-x-2">
                             {{ if price }}
-                                <div class="flex items-center space-x-2">
+                                <div class="flex items-center gap-x-2">
                                     <span class="text-lg">$</span>
                                     {{ partial:components/heading size="h3" :label="price" weight="semibold" class="text-center" }}
                                 </div>
@@ -24,9 +24,9 @@
                             {{ partial:components/paragraph :text="list_title" size="lg" weight="bold" class="mt-9 uppercase" }}
                         {{ /if }}
                         {{ if list_field }}
-                            <ul class="mt-5 space-y-6 text-sm leading-6 text-gray-600">
+                            <ul class="mt-5 flex flex-col gap-y-6 text-sm leading-6 text-gray-600">
                                 {{ list_field }}
-                                    <li class="flex items-center space-x-4">
+                                    <li class="flex items-center gap-x-4">
                                         {{ svg src="check" class="size-5 fill-current shrink-0 text-primary" }}
                                         {{ partial:components/paragraph :text="value" size="lg" weight="normal" }}
                                     </li>
@@ -35,7 +35,7 @@
                         {{ /if }}
                     </div>
                     {{ if toggle }}
-                        {{ partial:components/button :title="label" :url="link" class="!w-full" size="sm" variant="{button_variant}" }}
+                        {{ partial:components/button :title="label" :url="link" class="w-full!" size="sm" variant="{button_variant}" }}
                     {{ /if }}
                 </li>
             {{ /pricing }}
