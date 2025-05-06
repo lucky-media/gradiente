@@ -111,18 +111,18 @@
     "file": "assets/syne-latin-ext-700-normal-JNjPGvbT.woff2",
     "src": "node_modules/@fontsource/syne/files/syne-latin-ext-700-normal.woff2"
   },
-  "resources/css/tailwind.css": {
-    "file": "assets/tailwind-HAwtUuWX.css",
-    "src": "resources/css/tailwind.css",
+  "resources/css/site.css": {
+    "file": "assets/site-CfY0RnmM.css",
+    "src": "resources/css/site.css",
     "isEntry": true
   },
   "resources/js/site.js": {
-    "file": "assets/site-Cj5--HNl.js",
+    "file": "assets/site-Df25Xlux.js",
     "name": "site",
     "src": "resources/js/site.js",
     "isEntry": true,
     "css": [
-      "assets/site-C3dhGI8q.css"
+      "assets/site-BvoLUPSz.css"
     ],
     "assets": [
       "assets/syne-greek-400-normal-BX_XEq77.woff2",

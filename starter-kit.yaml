@@ -15,8 +15,6 @@ export_paths:
   - public/build
   - routes/web.php
   - package.json
-  - tailwind.config.js
   - vite.config.js
-  - postcss.config.js
   - .env.example
   - README.md
