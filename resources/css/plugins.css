@@ -1,0 +1,5 @@
+@plugin "tailwindcss-debug-screens";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+
+/* Plugin styles, this is all you */
