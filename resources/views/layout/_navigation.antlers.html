@@ -14,15 +14,13 @@
 
     {{# Toggle button (hidden on large screens) #}}
     {{ partial:layout/navigation/toggle_menu }}
-    
     {{# Desktop Menu #}}
-    <div x-show="!isMobile"
-        class="hidden w-full grow lg:flex lg:items-center lg:w-auto lg:space-x-24 space-y-10 lg:space-y-0">
+    <div x-show="!isMobile" class="hidden w-full grow lg:flex lg:items-center lg:w-auto lg:gap-x-24 gap-x-10">
         {{ partial:layout/navigation/menu }}
     </div>
 
     {{# Mobile Menu #}}
-    <div x-show="isMobile" x-cloak class="w-full grow lg:hidden space-y-10"
+    <div x-show="isMobile" x-cloak class="w-full grow lg:hidden flex flex-col gap-y-10"
         :class="{ 'block': isOpen, 'hidden': !isOpen }">
         {{ partial:layout/navigation/menu }}
     </div>

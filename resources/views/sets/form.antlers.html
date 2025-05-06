@@ -1,5 +1,5 @@
 <div class="container py-16 md:py-20">
-    <div class="max-w-5xl mx-auto border rounded-3xl shadow-xl">
+    <div class="max-w-5xl mx-auto border border-gray-200 rounded-3xl shadow-xl">
         {{ form:create :in="form:handle" }}
             <div class="pt-6 pb-5 px-7 md:pt-16 md:pb-10 md:px-14">
                 {{ if errors }}
@@ -8,7 +8,6 @@
                 {{ if success }}
                     {{ partial:partials/success_state class="mb-8" }}
                 {{ /if }}
-                
                 <div class="grid gap-8 md:grid-cols-12">
                     {{ fields }}
                         <div class="{{ width == '25' ?= 'md:col-span-3' }}

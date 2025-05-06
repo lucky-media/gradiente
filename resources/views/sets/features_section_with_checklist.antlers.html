@@ -5,7 +5,7 @@
         {{ /if }}
         <ul class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {{ lists }}
-                <li class="flex items-center space-x-4">
+                <li class="flex items-center gap-x-4">
                     {{ svg src="check" class="size-6 fill-current text-secondary shrink-0" }}
                     {{ partial:components/paragraph :text="value" color="dark" size="xl" weight="semibold" }}
                 </li>

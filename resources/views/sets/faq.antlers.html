@@ -7,7 +7,7 @@
             <li>
                 <div x-data="{ expanded: false }">
                     <button @click="expanded = !expanded" @mousedown.outside="expanded == false"
-                        class="flex items-center space-x-6 py-8 w-full">
+                        class="flex items-center gap-x-6 py-8 w-full">
                         <div>
                             <div x-show="!expanded">
                                 {{ svg src="plus" class="size-7 shrink-0" }}

@@ -1,7 +1,7 @@
 {{ paginate }}
     {{ if prev_page || next_page }}
         <div class="py-10 col-12 lg:py-20">
-            <ul class="flex items-center justify-center space-x-3">
+            <ul class="flex items-center justify-center gap-x-3">
                 {{ links:segments }}
                     {{ first }}
                         {{ if page == current_page }}
